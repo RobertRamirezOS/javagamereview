@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,9 +43,6 @@
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="review">Review</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
           </ul>
@@ -59,7 +57,7 @@
         <div class="intro-text">
           <span class="name">Freaking Awesome Reviews</span>
           <hr class="star-light">
-          <span class="skills">This will fucking work</span>
+          <span class="skills">This will fucking work ${test}</span>
         </div>
       </div>
     </header>
