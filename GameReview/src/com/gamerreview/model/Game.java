@@ -2,6 +2,7 @@ package com.gamerreview.model;
 
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -17,9 +18,10 @@ public class Game {
 	
 	private UUID id;
 	private String gameTitle;
+	private String gameSummary;
 	private String gameImage;
 	private Integer gameRating;
-	private List<Review> gameReview;
+	private List<Review> gameReview = new ArrayList<>();
 	
 	
 	public UUID getId() {
@@ -51,5 +53,11 @@ public class Game {
 	}
 	public void setGameReview(List<Review> gameReview) {
 		this.gameReview = gameReview;
+	}
+	public String getGameSummary() {
+		return gameSummary;
+	}
+	public void setGameSummary(String gameSummary) {
+		this.gameSummary = gameSummary;
 	}
 }
