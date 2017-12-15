@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.gamereview.dao.GameDAO;
+import com.gamereview.dao.ReviewDAO;
 import com.gamereview.service.ConnectionDerby;
 import com.gamerreview.model.Game;
 import com.gamerreview.model.Review;
@@ -26,6 +28,8 @@ public class ReviewServlet extends HttpServlet {
 	
 	private static List<Game> games = new ArrayList<>();
 	private static GameDAO gameDAO = new GameDAO();
+	private static ReviewDAO reviewDAO = new ReviewDAO();
+	
 	ConnectionDerby databasemanager = new ConnectionDerby();
     /**
      * @see HttpServlet#HttpServlet()
@@ -37,7 +41,7 @@ public class ReviewServlet extends HttpServlet {
         
         //Initialize data
         gameDAO.initializeData();
-        games = gameDAO.getGames();
+        
         
         
     }
@@ -48,6 +52,7 @@ public class ReviewServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String url = "/review.jsp";
+		games = gameDAO.getGames();
 		
 		request.setAttribute("test", "roberttest");//putting dynamic information into the jsp
 		request.setAttribute("games", games);  // Adds the game data to the page
@@ -72,6 +77,13 @@ public class ReviewServlet extends HttpServlet {
 		String review = request.getParameter("review");
 		String gameId = request.getParameter("gameId");
 		
+		Review saveReview = new Review();
+		saveReview.setGameId(UUID.fromString(gameId));
+		saveReview.setSummary(summary);
+		saveReview.setReview(review);
+		saveReview.setRating(Integer.parseInt(rating));
+		
+		reviewDAO.saveReview(saveReview);
 		
 		System.out.println("Summary:"+ summary);
 		System.out.println("Rating:"+rating);

@@ -134,6 +134,7 @@ public class GameDAO {
 		game5Review2.setSummary("SUMMARY #2:  All your favorite DC characters all in one game");
 		game5Review2.setRating(5);
 		game5Review2.setReview("REVIEW #2:  You can't go wrong with all the characters");
+		
 		// End of Injustice 2 game with review
 		
 		// Tekken 7 game with review
