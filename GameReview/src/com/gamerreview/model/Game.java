@@ -16,7 +16,7 @@ import java.util.UUID;
  */
 public class Game {
 	
-	private UUID id;
+	private UUID id=UUID.randomUUID();
 	private String gameTitle;
 	private String gameSummary;
 	private String gameImage;
