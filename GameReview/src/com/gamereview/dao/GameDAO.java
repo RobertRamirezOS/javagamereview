@@ -48,20 +48,20 @@ public class GameDAO {
 		Game game1 = new Game();//this creates the object game1
 		game1.setGameTitle("GodOfWarII");//this sets the game to GodOfWarII
 		game1.setGameImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0P3FKEG-RzN_Iw8c8Tj8PS2U6JR803LXCPREy_BGA1YcNwuCRog");
-		game1.setGameSummary("This is the best game ever");
+		
 		
 		
 		Review game1Review1 = new Review();//this creates the object for Review
 		game1Review1.setGameId(game1.getId());
-		game1Review1.setSummary("SUMMARY: I hated this game");//this sets the Summary for Game1Review1
+		game1Review1.setSummary("I hated this game");//this sets the Summary for Game1Review1
 		game1Review1.setRating(2);//this sets the rating for Game1Review1 
-		game1Review1.setReview("REVIEW #1: I couldn't get past level 1.... too hard");//this sets the actual Review for Game1Review1
+		game1Review1.setReview("I couldn't get past level 1.... too hard");//this sets the actual Review for Game1Review1
 		
 		Review game1Review2 = new Review();
 		game1Review2.setGameId(game1.getId());
 		game1Review2.setSummary("I liked this game");
 		game1Review2.setRating(4);
-		game1Review2.setReview("REVIEW #2: I dont know what the guy before me is talking about the game was easy and entertaining");
+		game1Review2.setReview("I dont know what the guy before me is talking about the game was easy and entertaining");
 		// End of God of war game with review
 		
 		// Witcher game with review
@@ -71,15 +71,15 @@ public class GameDAO {
 		
 		Review game2Review1 = new Review();
 		game2Review1.setGameId(game2.getId());
-		game2Review1.setSummary("SUMMARY#1: Good Graphics but dissappointed");
+		game2Review1.setSummary("Good Graphics but dissappointed");
 		game2Review1.setRating(3);
-		game2Review1.setReview("REVIEW #1: The graphics are amazing but storyline was boring");
+		game2Review1.setReview("The graphics are amazing but storyline was boring");
 		
 		Review game2Review2 = new Review();
 		game2Review2.setGameId(game2.getId());
-		game2Review2.setSummary("SUMMARY #2: This game sucks balls");
+		game2Review2.setSummary("This game sucks balls");
 		game2Review2.setRating(1);
-		game2Review2.setReview("REVIEW #2: All I can say is Terrible.  Terrible. Terrible.");
+		game2Review2.setReview("All I can say is Terrible.  Terrible. Terrible.");
 		// End of Witcher game with review
 		
 		// Horizon Zero Dawn game with review
@@ -89,15 +89,15 @@ public class GameDAO {
 				
 		Review game3Review1 = new Review();
 		game3Review1.setGameId(game3.getId());
-		game3Review1.setSummary("SUMMARY#1: Best Game Ever");
+		game3Review1.setSummary("Best Game Ever");
 		game3Review1.setRating(5);
-		game3Review1.setReview("REVIEW #1: Once you start playing this game you can't stop");
+		game3Review1.setReview("Once you start playing this game you can't stop");
 		
 		Review game3Review2 = new Review();
 		game3Review2.setGameId(game3.getId());
-		game3Review2.setSummary("SUMMARY #2: This Game is So Much Fun");
+		game3Review2.setSummary("This Game is So Much Fun");
 		game3Review2.setRating(5);
-		game3Review2.setReview("REVIEW #2: This game is worth the cost and lives up to the hype");
+		game3Review2.setReview("This game is worth the cost and lives up to the hype");
 		// End of Horizon game with review
 		
 		// Last Guardian game with review
@@ -107,15 +107,15 @@ public class GameDAO {
 						
 		Review game4Review1 = new Review();
 		game4Review1.setGameId(game4.getId());
-		game4Review1.setSummary("SUMMARY #1:  Puzzle Gamers Delight with flaws");
+		game4Review1.setSummary("Puzzle Gamers Delight with flaws");
 		game4Review1.setRating(4);
-		game4Review1.setReview("REVIEW #1:  The story line awesome but the puzzles leave you perplexed at times.");
+		game4Review1.setReview("The story line awesome but the puzzles leave you perplexed at times.");
 		
 		Review game4Review2 = new Review();
 		game4Review2.setGameId(game4.getId());
-		game4Review2.setSummary("SUMMARY #2Long but definitely worth it at the end");
+		game4Review2.setSummary("Long but definitely worth it at the end");
 		game4Review2.setRating(3);
-		game4Review2.setReview("REVIEW #2:  The game drags a bit but the ending made it worth the wait");
+		game4Review2.setReview("The game drags a bit but the ending made it worth the wait");
 		// End of Last Guardian game with review
 		
 		// Injustice 2 game with review
@@ -125,15 +125,15 @@ public class GameDAO {
 						
 		Review game5Review1 = new Review();
 		game5Review1.setGameId(game5.getId());
-		game5Review1.setSummary("SUMMARY #1: Fighting game with decent Graphics");
+		game5Review1.setSummary("Fighting game with decent Graphics");
 		game5Review1.setRating(3);
-		game5Review1.setReview("REVIEW #1:  The game mechanics are hard to learn and will take you a while to master");
+		game5Review1.setReview("The game mechanics are hard to learn and will take you a while to master");
 		
 		Review game5Review2 = new Review();
 		game5Review2.setGameId(game5.getId());
-		game5Review2.setSummary("SUMMARY #2:  All your favorite DC characters all in one game");
+		game5Review2.setSummary("All your favorite DC characters all in one game");
 		game5Review2.setRating(5);
-		game5Review2.setReview("REVIEW #2:  You can't go wrong with all the characters");
+		game5Review2.setReview("You can't go wrong with all the characters");
 		
 		// End of Injustice 2 game with review
 		
@@ -144,15 +144,15 @@ public class GameDAO {
 		 
 		Review game6Review1 = new Review();
 		game6Review1.setGameId(game6.getId());
-		game6Review1.setSummary("SUMMARY #1: This is the best Fighting game");
+		game6Review1.setSummary("This is the best Fighting game");
 		game6Review1.setRating(5);
-		game6Review1.setReview("REVIEW #1:  This game has a plethera of charachters and all easy to learn.");
+		game6Review1.setReview("This game has a plethera of charachters and all easy to learn.");
 		
 		Review game6Review2 = new Review();
 		game6Review2.setGameId(game6.getId());
-		game6Review2.setSummary("SUMMARY #2:  No Shortcoming to this game");
+		game6Review2.setSummary("No Shortcoming to this game");
 		game6Review2.setRating(5);
-		game6Review2.setReview("REVIEW #2:  The graphics good.  Characters good.  Overall game good.");
+		game6Review2.setReview("The graphics good.  Characters good.  Overall game good.");
 		// Tekken 7 game with review
 		
 		

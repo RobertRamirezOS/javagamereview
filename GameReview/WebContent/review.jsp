@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> <% /**taglib directive that specifies the JSTL core Library**/ %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +57,7 @@
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
       <div class="container">
-        <h2 class="text-center">Review these Games-${test} - ${games.get(0).getGameTitle()}</h2>
+        <h2 class="text-center">Review these Games</h2>
         <hr class="star-primary">
         <div class="row">
         
@@ -68,7 +69,7 @@
 	                  <i class="fa fa-search-plus fa-3x"></i>
 	                </div>
 	              </div>
-	              ${game.gameTitle}
+	              ${game.gameTitle} -  ${fn:length(game.gameReview)} Reviews
 	              <img class="img-fluid" src=" ${game.gameImage}" alt="">
 	            </a>
 	          </div>
@@ -167,16 +168,19 @@
 	                  <p>${game.gameSummary}
 	 <!--                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p> -->   <% /**comment out**/ %> 
 	                 
-	                 <table>
+	                 <table border="1">
+	                 
 	                 	<thead><tr><th>Summary</th><th>Rating</th><th>Review</th></tr></thead>
+	                 	
 	                 	<tbody>
+	                 	
 	     					<c:forEach items="${game.gameReview}" var="review">
 		                 		<tr><td>${review.summary}</td><td>${review.rating}</td><td>${review.review}</td></tr>
 	     					</c:forEach>
 	                 	</tbody>
 	                 </table>
 	                  <div>
-	                  Form
+	                  Post a Review
 	                  
    
       <form method="post" action="/GameReview/review"> <!--take this form and send all data in the review-->

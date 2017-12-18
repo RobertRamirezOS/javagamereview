@@ -16,7 +16,7 @@ public class ConnectionDerby {
 
 	public Connection createTable(String query) {
 		try {
-			// Obtenemos el Driver de Derby
+			// Get the Driver for Derby
 			Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
 			conn = DriverManager.getConnection("jdbc:derby:sample;create=true");
 			if (conn != null) {
@@ -64,16 +64,16 @@ public class ConnectionDerby {
 		try {
 			if (conn!=null) {return conn;}
 			
-			// Obtenemos el Driver de Derby
+			// Getting the Driver for Derby
 			Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
-			// Obtenemos la Conexión
+			// We get the connection
 			conn = DriverManager.getConnection("jdbc:derby:sample");
 			if (conn != null) {
 				System.out.println("No connection established.");
 			}
 		} catch (SQLException e) {
 			
-			// *************PRUEBAS*****************
+			// *************TEST*****************
 		} catch (ClassNotFoundException e) {
 			System.out.println(e.getMessage());
 			
@@ -89,8 +89,8 @@ public class ConnectionDerby {
 			Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
 			conn = getConnection();
 			sttm = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
-			// String sqlcad = "Select nombre, m2xgal, pregal, precub, descripcion from
-			// primer";
+			// 
+			// first";
 			rs = sttm.executeQuery(sql);
 			return rs;
 		} catch (Exception e) {
